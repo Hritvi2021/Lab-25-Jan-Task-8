@@ -4,7 +4,8 @@
  1. Create a new GitHub repository or reuse an existing one
  2. Add a simple application or static HTML project to the repository
     - Add project file
-      bah
+    # Commands
+       bash
       mkdir Project
       cd project
       echo "Hello,World!">index.html
