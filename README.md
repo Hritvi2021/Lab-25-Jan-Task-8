@@ -6,14 +6,14 @@
     - Add project file
     # Commands
        bash
-      mkdir Project
-      cd project
-      echo "Hello,World!">index.html
-      git init
-      git add .
-      git commit -m "Initial commit"
-      git remote add origin https://github.com/username/Project.git (github repo_url)
-      git push -u origin master
+       -mkdir Project
+       -cd project
+       -echo "Hello,World!">index.html
+       -git init
+       -git add .
+       -git commit -m "Initial commit"
+       -git remote add origin https://github.com/username/Project.git (github repo_url)
+       -git push -u origin master
 # Create a YAML Workflow File
  1. Navigate to the .github/workflows directory
  2. Create a new YAML file, e.g., ci.yml
