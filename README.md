@@ -72,6 +72,58 @@ pipeline {
      }
  }
 
+7. Run the Job
+   - Click on "Build Now" to run the job manually
+   - Jenkins will execute the build steps and display the console output
+
+8. Monitor and Troubleshoot
+   - Monitor the job status and console output
+   - Troubleshoot any issues that arise during the build process
+
+9. Understanding Jenkinsfile Components
+   1.Agent
+     - Defines where pipeline runs
+     - agent any → any available Jenkins node
+   2.Stages
+     - Logical grouping of pipeline steps
+     - Visible clearly in Jenkins UI
+   3.Steps
+      - Actual commands executed
+      - Can be shell (sh)
+
+10. Installing Dependencies (Example: Node.js)
+       stage('Install Dependencies') {
+         steps {
+           sh 'npm install'
+            }
+         }
+       stage('Run Tests') {
+         steps {
+           sh 'npm test'
+            }
+        }
+
+11. Environment Variables & Credentials
+     1. Environment Variables
+         environment {
+            APP_ENV = 'dev'
+         }
+    2. Usage:
+        sh 'echo $APP_ENV'
+
+12. Jenkins Credentials
+     - Jenkins Dashboard → Manage Jenkins → Credentials
+     - Add credential (Secret Text / Username & Password)
+         environment {
+           API_KEY = credentials('api-key-id')
+         }
+
+13. Triggering the Pipeline
+    1 Manual Trigger
+      Click Build Now
+    2 GitHub Webhook (Auto Trigger)
+      Payload URL: http://<jenkins-ip>:8080/github-webhook/
+      Content type: application/json
+    3 Build Triggers → GitHub hook trigger for GITScm polling (enable jonb in)
 
 
-     
